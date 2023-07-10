@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -82,5 +83,26 @@ u {
     transform-origin: top;
   }
 }
+.navbar-dark .navbar-nav .btn-compra-tickets { color: #25a342; }
 
+.btn-log-reg{ color: yellow!important; }
+
+@media (min-width: 992px) {
+  .btn-compra-tickets, .btn-log-reg {
+    border: 1px solid transparent;
+    border-radius: .8rem;
+  }
+  .btn-compra-tickets:hover,
+  .navbar-dark .navbar-nav .btn-compra-tickets.active {
+    background: #25a342;
+  }
+  .btn-log-reg:hover{
+    background: yellow;
+    color: black!important;
+  }
+}
 /*Css de pagina de compra*/
+
+
+/* css login */
+

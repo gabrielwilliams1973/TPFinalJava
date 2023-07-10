@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    font-family: "Ubuntu", helvetica;
+    margin-right: 0%;
+    margin-left: 0%;
+
+}
+
+#form-orador {
+    background: rgba(36, 69, 94, 0.9);
+    padding: 60px;
+    max-width: 400px;
+    margin: 40px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+#registrese{
+    background: rgba(36, 69, 94, 0.9);
+    padding: 60px;
+    max-width: 400px;
+    margin: 40px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+
+}
+·#oradores {
+    width: 50px;
+    height: 50px;
+
+    /* centrar vertical y horizontalmente */
+
+    top: 50%;
+    left: 50%;
+}
+
+.form-control {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+input {
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    background: none;
+
+    border: 1px solid #a0b3b0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #fff;
+    border-radius: 0;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+input:focus {
+    outline: none;
+    border-color: #1ab188;
+}
+#contenedor-input {
+    position: relative;
+    margin-bottom: 40px;
+}
+.button  {
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 1.5rem;
+    background: #1ab188;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.button:hover,
+.button:focus {
+    background: #1d1f1e;
+}
+
+.button-block {
+    margin-top: 50px;
+    margin-bottom: auto;
+    display: block;
+    width: 100%;
+
+}
+.btn-form{
+    cursor: pointer;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: "Ubuntu", helvetica;
+
+    margin: 0 0 40px;
+}
+ul {
+    text-align: center;
+    list-style: none;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;  ;
+    font-size: 2rem;
+
+    color: #fff;
+    transition: all 0.5s ease;
+}
+#registro {
+    text-align: center;
+    list-style: none;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 2rem;
+    background: #1ab188;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+/*CSS de particles*/
+.count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13e8e9;
+    font-size: 0.8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.js-count-particles {
+    font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles {
+    border-radius: 0 0 3px 3px;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-image: url("");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: -1;
+}
