@@ -119,6 +119,16 @@
           <span class="sr-only">Next</span>
         </button>
       </div>
+      <%
+        if(session.getAttribute("email") != null){
+
+      %>
+      <section class="text-center mb-4 mt-4">
+        <h1>Hola <span class="badge bg-secondary btn-log-reg"><%= session.getAttribute("email") %></span></h1>
+      </section>
+      <%
+        }
+      %>
     </article>
     <!--Oradores -->
     <article class="container">
