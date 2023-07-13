@@ -31,7 +31,7 @@
           <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#oradores">Los oradores</a>
+          <a class="nav-link" href="#LosOradores">Los oradores</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#lugar">El lugar y la fecha</a>
@@ -124,7 +124,7 @@
 
       %>
       <section class="text-center mb-4 mt-4">
-        <h1>Hola <span class="badge bg-secondary btn-log-reg"><%= session.getAttribute("email") %></span></h1>
+        <h1>Hola <span class="badge bg-secondary btn-log-reg"><%= session.getAttribute("nombre")%></span></h1>
       </section>
       <%
         }
@@ -132,7 +132,7 @@
     </article>
     <!--Oradores -->
     <article class="container">
-      <div class="card-body text-center mt-4 text-black ">
+      <div class="card-body text-center mt-4 text-black " id="LosOradores">
         <div >
           <p style="font-size:larger;">Conoce a los </p>
         </div>
@@ -178,8 +178,8 @@
 
     <!-- Foto y detalle de la Conferencia-->
 
-    <article class="container-fluid">
-      <div class="row mt-5">
+    <article class="container-fluid" id="lugar">
+      <div class="row mt-5" >
         <img src="./img/honolulu.jpg" class="img-fluid col-sm-12 col-md-6 mx-0 px-0 border">
         <div class="col-sm-12 col-md-6 bg-dark border">
           <div class="card-body text-white">
@@ -193,19 +193,30 @@
       <!-- Fin Foto y detalle de la Conferencia-->
       <article>
         <!-- Inicio Form Bootstrap-->
-        <div class="container-fluid justify-content-center mt-2">
+        <div class="container-fluid justify-content-center mt-2" id="form-orador">
           <p class="text-center col-md-12">CONVIÉRTETE EN UN</p>
           <h3 class="text-center col-md-12">ORADOR</h3>
           <p class="text-center" style="font: 1em sans-serif;">Anótate como orador para dar una
             <u class="subrayado">charla ignite</u>. Cuentanos de qué quieres hablar!</p>
 
           <div class="container-fluid d-flex justify-content-center col-sm-9">
-            <form class="row" id="oradores" style="width: 52rem;">
+            <form class="row" id="oradores" style="width: 52rem;"action="charla" method="post">
               <div class="col-md-6 mb-3">
-                <input class="form-control" type="text" placeholder="Nombre">
+
+                <input class="form-control" type="text" placeholder=
+                  <%
+    String nombre = (session.getAttribute("email") != null) ? (String) session.getAttribute("nombre") : "Nombre";
+%>
+
+                  <%= nombre %>
+                >
               </div>
               <div class="col-md-6">
-                <input class="form-control" type="text" placeholder="Apellido">
+                <input class="form-control" type="text" placeholder=
+                  <%
+     String apellido = (session.getAttribute("email") != null) ? (String) session.getAttribute("apellido") : "Apellido";
+                %>
+                  <%= apellido %>>
               </div>
 
               <div class="form-floating col-sm-12 mt-3">

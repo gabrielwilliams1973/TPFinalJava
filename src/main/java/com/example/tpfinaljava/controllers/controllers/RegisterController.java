@@ -13,7 +13,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-@WebServlet("/register")
+@WebServlet(  name= "register", value="/register")
 public class RegisterController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

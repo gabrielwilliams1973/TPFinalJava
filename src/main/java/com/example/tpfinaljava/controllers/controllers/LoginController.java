@@ -39,7 +39,7 @@ public class LoginController extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bdcliente?useSSL=false", "root", "Gabydam2905-");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bdclientes?useSSL=false", "root", "Gabydam2905-");
             final String QUERY = "select * from users where email = ? and password = ?";
             PreparedStatement ps = con.prepareStatement(QUERY);
             ps.setString(1, umail);
@@ -48,6 +48,8 @@ public class LoginController extends HttpServlet {
 
             if (rs.next()) {
                 session.setAttribute("email", rs.getString(1));
+                session.setAttribute("nombre", rs.getString("nombre"));
+                session.setAttribute("apellido", rs.getString("apellido"));
                 disp = request.getRequestDispatcher("index.jsp");
             } else {
                 request.setAttribute("status", "failed");
